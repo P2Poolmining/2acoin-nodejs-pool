@@ -108,7 +108,7 @@ currentPage = {
         updateText('paymentsTotalPaid', lastStats.pool.totalMinersPaid.toString());
         updateText('paymentsInterval', getReadableTime(lastStats.config.paymentsInterval));
         updateText('paymentsMinimum', getReadableCoins(lastStats.config.minPaymentThreshold));
-        updateText('paymentsDenomination', getReadableCoins(lastStats.config.denominationUnit, 3));
+        updateText('paymentsDenomination', getReadableCoins(lastStats.config.denominationUnit, 4));
         if (!lastStats.config.slushMiningEnabled)
             $('#slush_description').hide()
         renderPayments(lastStats.pool.payments);
