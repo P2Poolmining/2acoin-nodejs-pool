@@ -39,6 +39,19 @@
             </div>
         </div>
     </div>
+
+    <!-- Last Block Time -->
+    <div class="col-lg-3 col-sm-4">
+        <div class="infoBox hoverExpandEffect">
+            <div class="icon">
+                <span class="fa fa-line-chart"></span>
+            </div>
+            <div class="content">
+                <div class="text"><span tkey="lastBlockTime">Last Block Time</span></div>
+                <div class="value"><span class="smallText"><span id="lastBlockTime">N/A</span></span></div>
+            </div>
+        </div>
+    </div>
     
 </div>
 
@@ -91,6 +104,8 @@ currentPage = {
         if (lastStats.pool.lastBlockFound) {
             var d = new Date(parseInt(lastStats.pool.lastBlockFound)).toISOString();
             $('#lastBlockFound').timeago('update', d);
+            var d = new Date(parseInt(lastStats.pool.lastBlockFound)).toLocaleString();
+            updateText('lastBlockTime', d);
         }
         else {
             $('#lastBlockFound').removeAttr('title').data('ts', '').update('Never');
@@ -177,7 +192,8 @@ function generateChart(data) {
             }
         }
     });
-    $chart.show();
+//    $chart.show();
+    $('#blocksChart').show();
     displayedChart = true;
 }
 

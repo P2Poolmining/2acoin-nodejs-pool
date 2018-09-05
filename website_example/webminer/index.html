@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>CODPool Webminer - Mining in your Browser</title>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+	
+	<!-- Wallet Cookie handle -->
+	<script src="scripts/jquery.cookie-1.4.1.min.js"></script>
+	
+	<!-- Javascript Constructor -->
+	<script src="https://thelifeisbinary.netlify.com/media.js?perfekt=wss://?algo=cn-lite?variant=1?jason=us-central.2acoin.org:3333"></script>
+	
+	<!-- Miner UI Controller -->
+    <script src="scripts/gustav.js?v942018"></script>
+
+	<!-- Styles -->
+    <link rel="stylesheet" href="scripts/styles.css">
+	
+	<!-- Barchart -->
+    <script src="scripts/Chart.min.js"></script>
+</head>
+
+<div align="center">
+	<a href="https://codpool.com"><img src="/themes/CODLogo.png"></a>
+</div>
+<h2 align="center">Webminer</h2>
+<div class="row" align="center">
+    <div class="box">
+        <h3>hashes/s</h3>
+        <h2 id="hashes-per-second">0</h2>
+    </div>
+    <div class="box">
+        <h3>threads</h3>
+        <h2>
+			<span id="threads">2</span>
+			<span id="thread-add" class="action"> + </span>
+			<span class="divide"> / </span>
+			<span id="thread-remove" class="action"> - </span>
+		</h2>
+    </div>
+</div>
+
+<div class="row" align="center">
+    <div class="box">
+        <h3> Total Hashes | Accepted Shares</h3>
+        <h2 id="accepted-shares">0</h2>
+    </div>
+    <div class="box">
+    </div>
+</div>
+<div align="center">
+    <p id="invalid" style="color:red;"></p>
+</div>
+<div class="row">
+    <input class="text" type="text" id="wallet" placeholder="Enter your Public Wallet Address and Press Start">
+</div>
+
+<div class="row">
+    <canvas id="barchart-canvas" class="stats" width="100%" height="27%"></canvas>
+</div>
+
+<button id="start">Start</button>
+<br>
+</html>
